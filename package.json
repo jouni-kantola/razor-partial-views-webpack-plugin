@@ -1,0 +1,70 @@
+{
+  "name": "razor-partial-views-webpack-plugin",
+  "version": "1.0.0",
+  "description": "Plugin for generating ASP.NET Razor partial views for assets built with webpack.",
+  "main": "index.js",
+  "repository": "git@github.com:jouni-kantola/razor-partial-views-webpack-plugin.git",
+  "keywords": [
+    "webpack",
+    "razor",
+    "views",
+    "aspnet"
+  ],
+  "author": "Jouni Kantola <jouni@kantola.se>",
+  "license": "MIT",
+  "dependencies": {
+    "templated-assets-webpack-plugin": "^1.1.1"
+  },
+  "devDependencies": {
+    "ava": "^0.23.0",
+    "babel-eslint": "^8.0.2",
+    "eslint": "^4.11.0",
+    "eslint-plugin-prettier": "^2.3.1",
+    "husky": "^0.14.3",
+    "lint-staged": "^4.3.0",
+    "nyc": "^11.3.0",
+    "prettier": "^1.8.2"
+  },
+  "bugs": {
+    "url": "https://github.com/jouni-kantola/templated-assets-webpack-plugin/issues"
+  },
+  "homepage": "https://github.com/jouni-kantola/templated-assets-webpack-plugin#readme",
+  "files": [
+    "index.js",
+    "lib"
+  ],
+  "scripts": {
+    "lint": "node_modules/.bin/eslint .",
+    "test": "ava test/*-test.js",
+    "coverage": "node_modules/.bin/nyc --check-coverage npm test",
+    "qa": "npm run lint & npm run coverage",
+    "example": "node_modules/.bin/webpack --config ./example/webpack.config.js",
+    "precommit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.js": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "nyc": {
+    "watermarks": {
+      "lines": [
+        80,
+        95
+      ],
+      "functions": [
+        80,
+        95
+      ],
+      "branches": [
+        80,
+        95
+      ],
+      "statements": [
+        80,
+        95
+      ]
+    }
+  }
+}
