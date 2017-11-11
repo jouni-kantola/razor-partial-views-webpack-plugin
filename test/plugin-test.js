@@ -1,6 +1,7 @@
 import test from "ava";
-import plugin from "../lib/plugin";
+import RazorPartialViewsWebpackPlugin from "../lib/plugin";
 
-test("has plugin", t => {
-  t.is(plugin(), "running...");
+test("defaults to emtpy ruleset", t => {
+  new RazorPartialViewsWebpackPlugin();
+  t.pass();
 });
