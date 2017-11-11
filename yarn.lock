@@ -3543,10 +3543,11 @@ tar@^2.2.1:
     fstream "^1.0.2"
     inherits "2"
 
-templated-assets-webpack-plugin@^1.1.1:
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/templated-assets-webpack-plugin/-/templated-assets-webpack-plugin-1.1.1.tgz#2262f68196f5504fd8510efd947041a1d6404f93"
+templated-assets-webpack-plugin@^1.1.2:
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/templated-assets-webpack-plugin/-/templated-assets-webpack-plugin-1.1.2.tgz#c6fae2a8ef5d65f9b8e8ee7310d41853e7ebcb31"
   dependencies:
+    mkdirp "^0.5.1"
     webpack-sources "^1.0.2"
 
 term-size@^1.2.0:

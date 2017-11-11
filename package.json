@@ -13,7 +13,7 @@
   "author": "Jouni Kantola <jouni@kantola.se>",
   "license": "MIT",
   "dependencies": {
-    "templated-assets-webpack-plugin": "^1.1.1"
+    "templated-assets-webpack-plugin": "^1.1.2"
   },
   "devDependencies": {
     "ava": "^0.23.0",
