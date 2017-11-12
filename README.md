@@ -6,7 +6,7 @@ Plugin for generating ASP.NET Razor partial views for assets built with webpack.
 ## Example configuration
 ```javascript
 module.exports = {
-  target: "C#", // C# or VB
+  target: "chsharp", // csharp or vb
   rules: [
     {
       name: "manifest", // match by name
