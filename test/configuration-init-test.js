@@ -10,14 +10,16 @@ test("default to target C#", t => {
 });
 
 test("can set target in anycase", t => {
-  const config = new Configuration("vB");
+  const options = { target: "vB" };
+  const config = new Configuration(options);
 
   t.is(config.target, "VB");
   t.is(config.extension, "vbhtml");
 });
 
 test("can set target VB", t => {
-  const config = new Configuration("VB");
+  const options = { target: "VB" };
+  const config = new Configuration(options);
 
   t.is(config.target, "VB");
   t.is(config.extension, "vbhtml");
