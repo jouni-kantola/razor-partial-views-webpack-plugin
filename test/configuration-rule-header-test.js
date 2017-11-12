@@ -93,3 +93,59 @@ test("header configuration before model", t => {
     `${header}${EOL}@model ${model}${EOL}`
   );
 });
+
+test("@using(s) included in header", t => {
+  const usings = ["a-using", "another-using"];
+  const expected = `@using ${usings[0]}${EOL}@using ${usings[1]}${EOL}`;
+  const configuration = new Configuration(undefined, [
+    {
+      test: /asset/,
+      template: {
+        usings
+      }
+    }
+  ]);
+
+  t.is(configuration.rules[0].template.header(), expected);
+});
+
+test("@Import(s) included in header", t => {
+  const usings = ["a-using", "another-using"];
+  const expected = `@Imports ${usings[0]}${EOL}@Imports ${usings[1]}${EOL}`;
+  const configuration = new Configuration({ target: "VB" }, [
+    {
+      test: /asset/,
+      template: {
+        usings
+      }
+    }
+  ]);
+
+  t.is(configuration.rules[0].template.header(), expected);
+});
+
+test("usings in the middle", t => {
+  const header = "a-header";
+  const usings = ["a-using", "another-using"];
+  const model = "a-model";
+
+  const configuration = new Configuration(undefined, [
+    {
+      test: /asset/,
+      template: {
+        header: () => header,
+        usings,
+        model
+      }
+    }
+  ]);
+
+  t.is(
+    configuration.rules[0].template.header(),
+    `${header}
+@using ${usings[0]}
+@using ${usings[1]}
+@model ${model}
+`
+  );
+});
