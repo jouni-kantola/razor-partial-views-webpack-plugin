@@ -1,6 +1,6 @@
 {
   "name": "razor-partial-views-webpack-plugin",
-  "version": "0.1.1",
+  "version": "1.0.0",
   "description": "Plugin for generating ASP.NET Razor partial views for assets built with webpack.",
   "main": "index.js",
   "repository": "git@github.com:jouni-kantola/razor-partial-views-webpack-plugin.git",
