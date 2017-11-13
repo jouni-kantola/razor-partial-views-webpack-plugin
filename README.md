@@ -4,7 +4,7 @@ Plugin for generating ASP.NET Razor partial views for assets built with webpack.
 [![Build Status](https://travis-ci.org/jouni-kantola/razor-partial-views-webpack-plugin.svg?branch=master)](https://travis-ci.org/jouni-kantola/razor-partial-views-webpack-plugin)
 
 ## Usage
-`razor-partial-views-webpack-plugin` takes a set of rules for creating `cshtml`/`vbhtml` views, wrapping assets built with webpack.
+`razor-partial-views-webpack-plugin` takes a set of rules for creating `cshtml`/`vbhtml` views, wrapping assets built with webpack. With the plugin comes templates for scripts and styles, but any type of asset can be used as Razor view source. 
 
 ## Example configuration
 ```javascript
@@ -42,7 +42,7 @@ module.exports = {
           // no attributes in `template` are required
           template: {
             // prepend header to view
-            header: () => "<!-- auto generated -->",
+            header: () => "<!-- a header -->",
             // usings in view
             using: ["System", "System.Web"],
             // view's model
@@ -51,7 +51,7 @@ module.exports = {
             footer: () => `@* View generated ${new Date().toISOString()} *@`,
             // if needed, use a custom template
             path: path.join(__dirname, "templates/custom-template.tmpl"),
-            // in custom template, find & replace placeholder
+            // in custom template, placeholder to find & replace with asset
             // (default ##URL##/##SOURCE##)
             replace: /##CONTENT-GOES-HERE##/
           },
