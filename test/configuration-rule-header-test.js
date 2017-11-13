@@ -94,6 +94,20 @@ test("header configuration before model", t => {
   );
 });
 
+test("single using ok", t => {
+  const using = "a-using";
+  const configuration = new Configuration(undefined, [
+    {
+      test: /asset/,
+      template: {
+        using
+      }
+    }
+  ]);
+
+  t.is(configuration.rules[0].template.header(), `@using ${using}${EOL}`);
+});
+
 test("@using(s) included in header", t => {
   const usings = ["a-using", "another-using"];
   const expected = `@using ${usings[0]}${EOL}@using ${usings[1]}${EOL}`;
@@ -101,7 +115,7 @@ test("@using(s) included in header", t => {
     {
       test: /asset/,
       template: {
-        usings
+        using: usings
       }
     }
   ]);
@@ -116,7 +130,7 @@ test("@Import(s) included in header", t => {
     {
       test: /asset/,
       template: {
-        usings
+        using: usings
       }
     }
   ]);
@@ -134,7 +148,7 @@ test("usings in the middle", t => {
       test: /asset/,
       template: {
         header: () => header,
-        usings,
+        using: usings,
         model
       }
     }
