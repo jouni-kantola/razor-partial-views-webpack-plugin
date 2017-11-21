@@ -2877,6 +2877,10 @@ is-utf8@^0.2.0, is-utf8@^0.2.1:
   version "0.2.1"
   resolved "https://registry.yarnpkg.com/is-utf8/-/is-utf8-0.2.1.tgz#4b0da1442104d1b336340e80797e865cf39f7d72"
 
+is@^3.2.1:
+  version "3.2.1"
+  resolved "https://registry.yarnpkg.com/is/-/is-3.2.1.tgz#d0ac2ad55eb7b0bec926a5266f6c662aaa83dca5"
+
 isarray@1.0.0, isarray@^1.0.0, isarray@~1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/isarray/-/isarray-1.0.0.tgz#bb935d48582cba168c06834957a54a3e07124f11"
@@ -4920,10 +4924,11 @@ tar@^2.2.1:
     fstream "^1.0.2"
     inherits "2"
 
-templated-assets-webpack-plugin@^1.1.2:
-  version "1.1.2"
-  resolved "https://registry.yarnpkg.com/templated-assets-webpack-plugin/-/templated-assets-webpack-plugin-1.1.2.tgz#c6fae2a8ef5d65f9b8e8ee7310d41853e7ebcb31"
+templated-assets-webpack-plugin@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/templated-assets-webpack-plugin/-/templated-assets-webpack-plugin-1.2.0.tgz#0274effd6db4349c0a8e4f53703b659ad1366ad4"
   dependencies:
+    is "^3.2.1"
     mkdirp "^0.5.1"
     webpack-sources "^1.0.2"
 
