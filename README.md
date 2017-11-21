@@ -4,7 +4,7 @@ Plugin for generating ASP.NET Razor partial views for assets built with webpack.
 [![Build Status](https://travis-ci.org/jouni-kantola/razor-partial-views-webpack-plugin.svg?branch=master)](https://travis-ci.org/jouni-kantola/razor-partial-views-webpack-plugin)
 
 ## Usage
-`razor-partial-views-webpack-plugin` takes a set of rules for creating `cshtml`/`vbhtml` views, wrapping assets built with webpack. With the plugin comes templates for scripts and styles, but any type of asset can be used as Razor view source. 
+`razor-partial-views-webpack-plugin` use rules for creating `cshtml`/`vbhtml` views wrapping assets built with webpack. With the plugin comes templates for scripts and styles, but any type of asset can be used as Razor view source.
 
 ## Example configuration
 ```javascript
@@ -58,10 +58,13 @@ module.exports = {
           // `output` not required, defaults to:
           // - webpack's output directory
           // - load asset by URL
+          // - asset name from chunk name/filename
           output: {
             inline: true,
             async: false,
             defer: false,
+            // assign predicable name to generated partial view
+            name: (defaultName) => `generated-${defaultName}`
             // output view to custom location
             path: path.join(__dirname, "Views/_GeneratedViews")
           }
@@ -82,6 +85,9 @@ When running your ASP.NET web site, the generated views will be compiled. Below 
 - `yarn add razor-partial-views-webpack-plugin --dev`
 
 `razor-partial-views-webpack-plugin` is an extension of `templated-assets-webpack-plugin`. For more configuration options and detailed control, use [templated-assets-webpack-plugin](https://github.com/jouni-kantola/templated-assets-webpack-plugin).
+
+## Example
+Included in the plugin repository is an example webpack setup where various [rules](https://github.com/jouni-kantola/razor-partial-views-webpack-plugin/blob/master/example/razor-partial-views-config.js) are used. By executing `npm run example`, partial views are created e.g. for inlining CSS and webpack's runtime.
 
 ## Feedback
 * For feedback, bugs or change requests, please use [Issues](https://github.com/jouni-kantola/razor-partial-views-webpack-plugin/issues).
