@@ -1,0 +1,17 @@
+{
+    "presets": [
+        [
+            "env",
+            {
+                "targets": {
+                    "chrome": 52
+                },
+                "modules": false,
+                "loose": true
+            }
+        ]
+    ],
+    "plugins": [
+        "syntax-dynamic-import"
+    ]
+}
