@@ -1,7 +1,6 @@
 const path = require("path");
 
 module.exports = {
-  target: "csharp",
   rules: [
     {
       name: ["app"],
@@ -22,19 +21,27 @@ module.exports = {
         footer: () => `@* View generated ${new Date().toISOString()} *@`
       },
       output: {
-        name: defaultName => defaultName.split(".")[0]
+        name: defaultName => defaultName.split(".")[0],
+        inline: true
       }
     },
     {
-      test: /manifest.json$/,
+      name: "manifest",
       template: {
-        path: path.join(__dirname, "tmpl/chunk-manifest.tmpl")
+        model: "dynamic"
       },
-      replace: "##MANIFEST##",
+      output: {
+        inline: true
+      }
+    },
+    {
+      test: /manifest\.json$/,
+      template: {
+        path: path.join(__dirname, "tmpl/chunk-manifest.tmpl"),
+        replace: "##MANIFEST##"
+      },
       output: {
         name: "chunk-manifest",
-        extension: "cshtml",
-        prefix: "__",
         inline: true
       }
     }
