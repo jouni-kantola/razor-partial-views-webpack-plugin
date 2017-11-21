@@ -48,7 +48,7 @@ module.exports = {
     new ChunkManifestPlugin(),
     new webpack.SourceMapDevToolPlugin({
       filename: "[file].map",
-      exclude: ["manifest"],
+      exclude: ["manifest", "styles"],
       append: `\n//# sourceMappingURL=${publicPath}/[url]\n`
     }),
     new ExtractTextPlugin({
