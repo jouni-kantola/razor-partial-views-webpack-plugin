@@ -3,7 +3,7 @@ node_js:
   - "8.9.0"
   - "4.3.0"
 install:
-  - npm install
+  - yarn install --ignore-engines
 script:
   - npm run qa
   - npm run example
