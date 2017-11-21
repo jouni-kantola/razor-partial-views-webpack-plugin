@@ -6,5 +6,6 @@ install:
   - npm install
 script:
   - npm run qa
+  - npm run example
 notifications:
   email: false
