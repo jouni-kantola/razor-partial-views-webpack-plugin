@@ -30,9 +30,7 @@ test.cb("emit cshtml asset", t => {
 
     const asset = compilation.assets["asset.cshtml"];
 
-    const expected = `<script type="text/javascript" src="/${
-      compilation.chunks[0].files[0]
-    }"></script>${EOL}`;
+    const expected = `<script type="text/javascript" src="/${compilation.chunks[0].files[0]}"></script>${EOL}`;
     t.is(asset.source(), expected);
     t.is(asset.size(), expected.length);
     t.end();
