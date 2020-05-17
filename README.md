@@ -63,6 +63,10 @@ module.exports = {
             inline: true,
             async: false,
             defer: false,
+            // asset is ESM module
+            module: false,
+            // ...or fallback if module not supported
+            nomodule: false,
             // assign predicable name to generated partial view
             name: (defaultName) => `generated-${defaultName}`
             // output view to custom location
