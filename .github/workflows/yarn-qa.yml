@@ -5,9 +5,9 @@ name: Node.js CI
 
 on:
   push:
-    branches: [ master ]
+    branches: [ master, webpack-5 ]
   pull_request:
-    branches: [ master ]
+    branches: [ master, webpack-5 ]
 
 jobs:
   build:
@@ -16,7 +16,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [6.11.5]
+        node-version: [10.13.0]
 
     steps:
     - uses: actions/checkout@v2
