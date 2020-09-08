@@ -1,4 +1,6 @@
+import path from "path";
 import test from "ava";
+import webpack from "webpack";
 import { EOL } from "os";
 import RazorPartialViewsWebpackPlugin from "../lib/plugin";
 
@@ -11,37 +13,32 @@ test.cb("emit cshtml asset", t => {
     ]
   });
 
-  const compilation = {
-    chunks: [
-      {
-        name: "asset",
-        files: ["asset.js"]
+  webpack(
+    {
+      entry: {
+        asset: path.join(__dirname, "plugin-apply-test-entry.js")
+      },
+      output: {
+        path: path.join(__dirname, "dist")
+      },
+      plugins: [plugin]
+    },
+    (err, stats) => {
+      if (err) {
+        return t.end(err);
+      } else if (stats.hasErrors()) {
+        return t.end(stats.toString());
       }
-    ],
-    assets: {
-      "asset.js": {
-        source: () => "contents of assets.js"
-      }
+
+      const { compilation } = stats;
+
+      const expected = `<script type="text/javascript" src="/${compilation.chunks[0].files[0]}"></script>${EOL}`;
+
+      const asset = compilation.assets["asset.cshtml"];
+      t.is(asset.source(), expected);
+      t.is(asset.size(), expected.length);
+
+      t.end();
     }
-  };
-
-  const done = () => {
-    t.is(Object.keys(compilation.assets).length, 2);
-
-    const asset = compilation.assets["asset.cshtml"];
-
-    const expected = `<script type="text/javascript" src="/${compilation.chunks[0].files[0]}"></script>${EOL}`;
-    t.is(asset.source(), expected);
-    t.is(asset.size(), expected.length);
-    t.end();
-  };
-
-  const compiler = {
-    plugin: (event, doPluginWork) => {
-      t.is(event, "emit");
-      doPluginWork(compilation, done);
-    }
-  };
-
-  plugin.apply(compiler);
+  );
 });
