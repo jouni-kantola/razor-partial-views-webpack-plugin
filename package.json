@@ -24,14 +24,14 @@
     "@babel/preset-env": "^7.11.5",
     "chunk-manifest-webpack-plugin": "1.0.0",
     "css-loader": "^0.28.7",
-    "eslint": "^4.11.0",
-    "eslint-plugin-prettier": "^2.3.1",
+    "eslint": "^7.8.1",
+    "eslint-plugin-prettier": "^3.1.4",
     "extract-text-webpack-plugin": "^3.0.2",
-    "husky": "^0.14.3",
+    "husky": "^4.3.0",
     "is-thirteen": "^2.0.0",
-    "lint-staged": "^4.3.0",
-    "nyc": "^11.3.0",
-    "prettier": "^1.8.2",
+    "lint-staged": "^10.3.0",
+    "nyc": "^15.1.0",
+    "prettier": "^2.1.1",
     "webpack": "^3.8.1"
   },
   "engines": {
@@ -52,6 +52,12 @@
     "qa": "yarn lint & yarn coverage",
     "example": "webpack --config ./example/webpack.config.js",
     "precommit": "lint-staged"
+  },
+  "prettier": {
+    "tabWidth": 2,
+    "trailingComma": "none",
+    "singleQuote": false,
+    "arrowParens": "avoid"
   },
   "lint-staged": {
     "*.js": [
