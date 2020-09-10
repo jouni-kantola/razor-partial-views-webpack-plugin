@@ -1,17 +1,15 @@
 {
     "presets": [
         [
-            "env",
+            "@babel/env",
             {
-                "targets": {
-                    "chrome": 52
-                },
-                "modules": false,
-                "loose": true
+                "targets": "> 0.25%, not dead",
+                "useBuiltIns": "usage",
+                "modules": false
             }
         ]
     ],
     "plugins": [
-        "syntax-dynamic-import"
+        "@babel/plugin-syntax-dynamic-import"
     ]
 }
