@@ -11,7 +11,7 @@ const publicPath = "https://test-cdn.com/assets";
 
 module.exports = {
   entry: {
-    vendor: ["babel-polyfill", "is-thirteen"],
+    vendor: ["is-thirteen"],
     app: path.join(__dirname, "app.js")
   },
   resolve: {
