@@ -26,22 +26,13 @@ module.exports = {
       }
     },
     {
-      name: "manifest",
+      test: /runtime/,
       template: {
-        model: "dynamic"
+        path: path.join(__dirname, "tmpl/runtime.tmpl"),
+        replace: "##HERE_GOES_RUNTIME##"
       },
       output: {
-        inline: true
-      }
-    },
-    {
-      test: /manifest\.json$/,
-      template: {
-        path: path.join(__dirname, "tmpl/chunk-manifest.tmpl"),
-        replace: "##MANIFEST##"
-      },
-      output: {
-        name: "chunk-manifest",
+        name: "runtime-view",
         inline: true
       }
     }

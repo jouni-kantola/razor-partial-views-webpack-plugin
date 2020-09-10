@@ -1,8 +1,7 @@
 const path = require("path");
 
 const webpack = require("webpack");
-const ChunkManifestPlugin = require("chunk-manifest-webpack-plugin");
-const ExtractTextPlugin = require("extract-text-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 const RazorPartialViewsWebpackPlugin = require("../");
 const razorPartialViewsConfig = require("./razor-partial-views-config.js");
@@ -33,27 +32,42 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        use: ExtractTextPlugin.extract({
-          use: "css-loader"
-        })
+        use: [
+          {
+            loader: MiniCssExtractPlugin.loader
+          },
+          "css-loader"
+        ]
       }
     ]
   },
+  optimization: {
+    runtimeChunk: "single",
+    splitChunks: {
+      cacheGroups: {
+        common: {
+          test: /[\\/]node_modules[\\/]/,
+          name: "vendors",
+          chunks: "all"
+        },
+        styles: {
+          name: "app-styles",
+          test: /\.css$/,
+          chunks: "all",
+          enforce: true
+        }
+      }
+    }
+  },
   plugins: [
-    new webpack.optimize.CommonsChunkPlugin({
-      name: ["vendor", "manifest"],
-      minChunks: Infinity
-    }),
-    new webpack.HashedModuleIdsPlugin(),
-    new ChunkManifestPlugin(),
     new webpack.SourceMapDevToolPlugin({
       filename: "[file].map",
       exclude: ["manifest", "styles"],
       append: `\n//# sourceMappingURL=${publicPath}/[url]\n`
     }),
-    new ExtractTextPlugin({
-      filename: "styles.[contenthash].css",
-      allChunks: true
+    new MiniCssExtractPlugin({
+      filename: "[name].css",
+      ignoreOrder: false
     }),
     new RazorPartialViewsWebpackPlugin(razorPartialViewsConfig)
   ]
