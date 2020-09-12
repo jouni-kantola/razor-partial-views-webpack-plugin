@@ -5506,10 +5506,10 @@ tar@^6.0.2:
     mkdirp "^1.0.3"
     yallist "^4.0.0"
 
-templated-assets-webpack-plugin@^2.0.0-beta.0:
-  version "2.0.0-beta.0"
-  resolved "https://registry.yarnpkg.com/templated-assets-webpack-plugin/-/templated-assets-webpack-plugin-2.0.0-beta.0.tgz#23a24ab4a7605aa3c36216a43a1e0cf8c00f48c9"
-  integrity sha512-BjYpXubDDAhTkZMeedd10xf0/PM6iDG10VL9jsFSe98hPW5zad25LKp5c/RCZO/oXkwz8P7idC5E4fYoJdgq6w==
+templated-assets-webpack-plugin@^2.0.0-beta.1:
+  version "2.0.0-beta.1"
+  resolved "https://registry.yarnpkg.com/templated-assets-webpack-plugin/-/templated-assets-webpack-plugin-2.0.0-beta.1.tgz#61a3ec5e194348c69d7ff335f646f67eea846271"
+  integrity sha512-k01/7+rRRxcBDwKLe5UcWfEUkh1RUfQk9DHHZ7McoCep4kSE1hDvtgrnKmZjTkZkG2U9wFza6TPUdzT4GSxHBA==
   dependencies:
     is "^3.3.0"
     mkdirp "^1.0.4"

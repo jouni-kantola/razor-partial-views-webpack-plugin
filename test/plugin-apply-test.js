@@ -81,11 +81,19 @@ test.cb("default generate templated ", t => {
 
       const { compilation } = stats;
 
-      const expected = `<script type="text/javascript" src="/${compilation.chunks[0].files[0]}"></script>${EOL}`;
+      const [chunk] = compilation.chunks;
+      const [file] = chunk.files;
 
+      const expected = `<script type="text/javascript" src="/${file}"></script>${EOL}`;
       const asset = compilation.assets["asset.cshtml"];
-      t.is(asset.source(), expected);
       t.is(asset.size(), expected.length);
+
+      const source = fs.readFileSync(
+        path.join(OUTPUT_PATH, "asset.cshtml"),
+        "utf8"
+      );
+
+      t.is(source, expected);
 
       t.end();
     }
