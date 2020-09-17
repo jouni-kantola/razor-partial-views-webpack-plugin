@@ -28,9 +28,9 @@
     "mini-css-extract-plugin": "^0.11.2",
     "husky": "^4.3.0",
     "is-thirteen": "^2.0.0",
-    "lint-staged": "^10.3.0",
+    "lint-staged": "^10.4.0",
     "nyc": "^15.1.0",
-    "prettier": "^2.1.1",
+    "prettier": "^2.1.2",
     "rimraf": "^3.0.2",
     "webpack": "^5.0.0-beta.30",
     "webpack-cli": "^3.3.12"
