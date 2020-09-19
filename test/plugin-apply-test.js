@@ -27,7 +27,8 @@ test.cb("emit cshtml asset", t => {
         asset: path.join(__dirname, "plugin-apply-test-entry.js")
       },
       output: {
-        path: OUTPUT_PATH
+        path: OUTPUT_PATH,
+        publicPath: "/"
       },
       plugins: [plugin]
     },
@@ -68,7 +69,8 @@ test.cb("default generate templated ", t => {
         asset: path.join(__dirname, "plugin-apply-test-entry.js")
       },
       output: {
-        path: path.join(__dirname, "dist")
+        path: path.join(__dirname, "dist"),
+        publicPath: "/"
       },
       plugins: [plugin]
     },
