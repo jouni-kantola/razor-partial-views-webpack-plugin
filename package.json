@@ -32,7 +32,7 @@
     "nyc": "^15.1.0",
     "prettier": "^2.1.2",
     "rimraf": "^3.0.2",
-    "webpack": "^5.0.0-beta.30",
+    "webpack": "^5.0.0-beta.32",
     "webpack-cli": "^3.3.12"
   },
   "engines": {
