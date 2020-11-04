@@ -1,0 +1,28 @@
+name: tests
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [10.13.0]
+        webpack-version-tag: [webpack@webpack-2, webpack@webpack-3, webpack@webpack-4, webpack@latest]
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Use Node.js ${{ matrix.node-version }} with ${{ matrix.webpack-version-tag }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
+    - run: yarn install
+    - run: yarn add ${{ matrix.webpack-version-tag }} --dev
+    - run: node_modules/.bin/webpack --version
+    - run: yarn test --verbose
