@@ -5501,14 +5501,14 @@ tar@^6.0.2:
     mkdirp "^1.0.3"
     yallist "^4.0.0"
 
-templated-assets-webpack-plugin@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/templated-assets-webpack-plugin/-/templated-assets-webpack-plugin-2.0.0.tgz#e57448af58fcc5b9c12d8450a82863ad1a177bd0"
-  integrity sha512-zHx2xmZr8pq7nCZCME+0fGSZCNFuVMoFE50JPnibx3y6YqKSUj5bw+YS09wdeQXpYstpJ7zdYYAcGZ5LKpepcg==
+templated-assets-webpack-plugin@^3.0.0-beta.0:
+  version "3.0.0-beta.0"
+  resolved "https://registry.yarnpkg.com/templated-assets-webpack-plugin/-/templated-assets-webpack-plugin-3.0.0-beta.0.tgz#6d52864b20b2ddbf6f9c7c78f33ac800317a8663"
+  integrity sha512-5ONtXGLxyByAoKho2cQ5fGjjRFXilc1enk/HDM4o3d4a6wj+Q1IHQtq9borroxNeHCjMqeyKEGIp3Q1bxn18xA==
   dependencies:
     is "^3.3.0"
     mkdirp "^1.0.4"
-    webpack-sources "^1.4.3"
+    webpack-sources "^2.2.0"
 
 term-size@^1.2.0:
   version "1.2.0"
@@ -5846,6 +5846,14 @@ webpack-sources@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/webpack-sources/-/webpack-sources-2.0.0.tgz#602d4bc7ff2e630ceb753a09ef49f260fa4ae7f0"
   integrity sha512-CpCkDjEKa5vYVRDFDRABBkBomz+82lz9bpXViN1LBc8L/WDXvSyELKcBvBnTeDEiRfMJCGAFG9+04406PLSsIA==
+  dependencies:
+    source-list-map "^2.0.1"
+    source-map "^0.6.1"
+
+webpack-sources@^2.2.0:
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/webpack-sources/-/webpack-sources-2.2.0.tgz#058926f39e3d443193b6c31547229806ffd02bac"
+  integrity sha512-bQsA24JLwcnWGArOKUxYKhX3Mz/nK1Xf6hxullKERyktjNMC4x8koOeaDNTA2fEJ09BdWLbM/iTW0ithREUP0w==
   dependencies:
     source-list-map "^2.0.1"
     source-map "^0.6.1"
