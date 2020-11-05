@@ -24,7 +24,7 @@ test.serial.cb("emit cshtml asset", t => {
   webpack(
     {
       entry: {
-        asset: path.join(__dirname, "plugin-apply-test-entry.js")
+        asset: path.join(__dirname, "_plugin-apply-entry.js")
       },
       output: {
         path: OUTPUT_PATH,
@@ -66,7 +66,7 @@ test.serial.cb("default generate templated assets", t => {
   webpack(
     {
       entry: {
-        asset: path.join(__dirname, "plugin-apply-test-entry.js")
+        asset: path.join(__dirname, "_plugin-apply-entry.js")
       },
       output: {
         path: path.join(__dirname, "dist"),
@@ -120,7 +120,7 @@ test.serial.cb("override default output location", t => {
   webpack(
     {
       entry: {
-        asset: path.join(__dirname, "plugin-apply-test-entry.js")
+        asset: path.join(__dirname, "_plugin-apply-entry.js")
       },
       output: {
         path: path.join(__dirname, "dist"),
