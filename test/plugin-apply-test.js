@@ -60,7 +60,7 @@ test.serial.cb("emit cshtml asset", t => {
   );
 });
 
-test.serial.cb("default generate templated ", t => {
+test.serial.cb("default generate templated assets", t => {
   const plugin = new RazorPartialViewsWebpackPlugin();
 
   webpack(
