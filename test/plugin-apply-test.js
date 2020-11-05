@@ -12,7 +12,7 @@ test.beforeEach.cb(t => {
   rimraf(OUTPUT_PATH, t.end);
 });
 
-test.cb("emit cshtml asset", t => {
+test.serial.cb("emit cshtml asset", t => {
   const plugin = new RazorPartialViewsWebpackPlugin({
     rules: [
       {
@@ -60,7 +60,7 @@ test.cb("emit cshtml asset", t => {
   );
 });
 
-test.cb("default generate templated ", t => {
+test.serial.cb("default generate templated ", t => {
   const plugin = new RazorPartialViewsWebpackPlugin();
 
   webpack(
