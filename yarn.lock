@@ -4939,10 +4939,10 @@ tapable@^2.0.0:
   resolved "https://registry.yarnpkg.com/tapable/-/tapable-2.0.0.tgz#a49c3d6a8a2bb606e7db372b82904c970d537a08"
   integrity sha512-bjzn0C0RWoffnNdTzNi7rNDhs1Zlwk2tRXgk8EiHKAOX1Mag3d6T0Y5zNa7l9CJ+EoUne/0UHdwS8tMbkh9zDg==
 
-templated-assets-webpack-plugin@^3.0.0-beta.1:
-  version "3.0.0-beta.1"
-  resolved "https://registry.yarnpkg.com/templated-assets-webpack-plugin/-/templated-assets-webpack-plugin-3.0.0-beta.1.tgz#cb26b4ac49180b427ed86ed3bfb10de28dcc8c63"
-  integrity sha512-/tlM/SQE0GKxwdqayDX2g8WknPJj6EmwZteS48zOOSzN28DOw+FCioljbP6P0PX49lXlVjOjlAHOFKCgylBd7Q==
+templated-assets-webpack-plugin@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/templated-assets-webpack-plugin/-/templated-assets-webpack-plugin-3.0.0.tgz#c78e91396c96c04cebae879abc383d522b79ee2b"
+  integrity sha512-BIfDwgtGS1BhL6nEOhMMJRoD5IAFpG9he0NL43V5yfHulwxQqEVvCs58d6R9v1IYMml2oZ3DBP9XaNuPQQmZMg==
   dependencies:
     is "^3.3.0"
     mkdirp "^1.0.4"
