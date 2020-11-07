@@ -1,7 +1,8 @@
 import test from "ava";
-import { EOL } from "os";
 
 import Header from "../lib/header";
+
+const EOL = "\n";
 
 test("default to blank header", t => {
   const header = new Header();
