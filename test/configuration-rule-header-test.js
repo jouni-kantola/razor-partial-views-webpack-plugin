@@ -1,7 +1,8 @@
 import test from "ava";
-import { EOL } from "os";
 
 import Configuration from "../lib/configuration";
+
+const EOL = "\n";
 
 test("header not required", t => {
   const configuration = new Configuration(undefined, [

@@ -1,11 +1,11 @@
 import path from "path";
 import test from "ava";
 import webpack from "webpack";
-import { EOL } from "os";
 import rimraf from "rimraf";
 import fs from "fs";
 import RazorPartialViewsWebpackPlugin from "../lib/plugin";
 
+const EOL = "\n";
 const OUTPUT_PATH = path.join(__dirname, "dist");
 
 test.beforeEach.cb(t => {
