@@ -13,7 +13,7 @@
   "author": "Jouni Kantola <jouni@kantola.se>",
   "license": "MIT",
   "dependencies": {
-    "templated-assets-webpack-plugin": "^3.0.0-beta.1"
+    "templated-assets-webpack-plugin": "^3.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.12.3",
