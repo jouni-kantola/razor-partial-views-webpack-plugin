@@ -4939,14 +4939,14 @@ tapable@^2.0.0:
   resolved "https://registry.yarnpkg.com/tapable/-/tapable-2.0.0.tgz#a49c3d6a8a2bb606e7db372b82904c970d537a08"
   integrity sha512-bjzn0C0RWoffnNdTzNi7rNDhs1Zlwk2tRXgk8EiHKAOX1Mag3d6T0Y5zNa7l9CJ+EoUne/0UHdwS8tMbkh9zDg==
 
-templated-assets-webpack-plugin@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/templated-assets-webpack-plugin/-/templated-assets-webpack-plugin-3.0.0.tgz#c78e91396c96c04cebae879abc383d522b79ee2b"
-  integrity sha512-BIfDwgtGS1BhL6nEOhMMJRoD5IAFpG9he0NL43V5yfHulwxQqEVvCs58d6R9v1IYMml2oZ3DBP9XaNuPQQmZMg==
+templated-assets-webpack-plugin@^3.0.1:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/templated-assets-webpack-plugin/-/templated-assets-webpack-plugin-3.0.1.tgz#113fa59b8c828c23bb4d96bc4adbce289261df77"
+  integrity sha512-pmuSp8B8X822lSy1+ZqUAbGJwXdilSyhEVgUmoZBRI0IR2Gymt2Lq1xDVaIFnvENypXmbg+tWCxDbETvFXiGUw==
   dependencies:
     is "^3.3.0"
     mkdirp "^1.0.4"
-    webpack-sources "^2.2.0"
+    webpack-sources "^3.2.2"
 
 term-size@^1.2.0:
   version "1.2.0"
@@ -5229,13 +5229,18 @@ webpack-sources@^1.1.0:
     source-list-map "^2.0.0"
     source-map "~0.6.1"
 
-webpack-sources@^2.1.1, webpack-sources@^2.2.0:
+webpack-sources@^2.1.1:
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/webpack-sources/-/webpack-sources-2.2.0.tgz#058926f39e3d443193b6c31547229806ffd02bac"
   integrity sha512-bQsA24JLwcnWGArOKUxYKhX3Mz/nK1Xf6hxullKERyktjNMC4x8koOeaDNTA2fEJ09BdWLbM/iTW0ithREUP0w==
   dependencies:
     source-list-map "^2.0.1"
     source-map "^0.6.1"
+
+webpack-sources@^3.2.2:
+  version "3.2.2"
+  resolved "https://registry.yarnpkg.com/webpack-sources/-/webpack-sources-3.2.2.tgz#d88e3741833efec57c4c789b6010db9977545260"
+  integrity sha512-cp5qdmHnu5T8wRg2G3vZZHoJPN14aqQ89SyQ11NpGH5zEMDCclt49rzo+MaRazk7/UeILhAI+/sEtcM+7Fr0nw==
 
 webpack@^5.4.0:
   version "5.4.0"
