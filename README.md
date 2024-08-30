@@ -173,4 +173,3 @@ When running your ASP.NET web site, the generated views will be compiled. Below 
 ## Feedback
 
 - For feedback, bugs or change requests, please use [Issues](https://github.com/jouni-kantola/razor-partial-views-webpack-plugin/issues).
-- For direct contact, tweet [@jouni_kantola](https://twitter.com/jouni_kantola).
