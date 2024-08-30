@@ -3976,10 +3976,10 @@ mkdirp@^0.5.1:
   dependencies:
     minimist "0.0.8"
 
-mkdirp@^1.0.4:
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/mkdirp/-/mkdirp-1.0.4.tgz#3eb5ed62622756d79a5f0e2a221dfebad75c2f7e"
-  integrity sha512-vVqVZQyf3WLx2Shd0qJ9xuvqgAyKPLAiqITEtqW0oIUjzo3PePDd6fW9iFz30ef7Ysp/oiWqbhszeGWW2T6Gzw==
+mkdirp@^3.0.1:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/mkdirp/-/mkdirp-3.0.1.tgz#e44e4c5607fb279c168241713cc6e0fea9adcb50"
+  integrity sha512-+NsyUUAZDmo6YVHzL/stxSu3t9YS1iljliy3BSDrXJ/dkn1KYdmtZODGGjLcc9XLgVVpH4KshHB8XmZgMhaBXg==
 
 ms@2.1.2, ms@^2.1.1, ms@^2.1.2:
   version "2.1.2"
@@ -5241,13 +5241,13 @@ tapable@^2.1.1, tapable@^2.2.0:
   resolved "https://registry.yarnpkg.com/tapable/-/tapable-2.2.1.tgz#1967a73ef4060a82f12ab96af86d52fdb76eeca0"
   integrity sha512-GNzQvQTOIP6RyTfE2Qxb8ZVlNmw0n88vp1szwWRimP02mnTsx3Wtn5qRdqY9w2XduFNUgvOwhNnQsjwCp+kqaQ==
 
-templated-assets-webpack-plugin@^3.0.2:
-  version "3.0.2"
-  resolved "https://registry.yarnpkg.com/templated-assets-webpack-plugin/-/templated-assets-webpack-plugin-3.0.2.tgz#1a6815ac4e1ecfe4b61f37cc37230ed1a200ecf4"
-  integrity sha512-JTscYoWBlj53/Z6Hg+SAN/wNwPtuAyMXhh2T2M8KcIDhReGE5oJO+VF+DIrr+N+T33Q8LsI/c+79sJU44iztjA==
+templated-assets-webpack-plugin@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/templated-assets-webpack-plugin/-/templated-assets-webpack-plugin-4.0.0.tgz#cdbc73f85fb99d32493eafbed6f7c2be8bcf6e31"
+  integrity sha512-24vwfCdk46jtryn42Juy1mzhX8dgAGkzHAtfhQqNKCAQobIAKjW6kLGxPtKZSjfCdH1k3bWM6jwsIUEb+qOCEQ==
   dependencies:
     is "^3.3.0"
-    mkdirp "^1.0.4"
+    mkdirp "^3.0.1"
     webpack-sources "^3.2.3"
 
 term-size@^1.2.0:
