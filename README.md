@@ -6,8 +6,8 @@ Plugin for generating ASP.NET Razor partial views for assets built with webpack.
 
 ## Versions and compatibility
 
-v4 for Rspack and webpack 5+
-v3 for webpack v2-5
+* v4 for Rspack and webpack 5+
+* v3 for webpack v2-5
 
 ## Usage
 
