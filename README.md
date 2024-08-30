@@ -4,6 +4,11 @@ Plugin for generating ASP.NET Razor partial views for assets built with webpack.
 
 ![Build Status](https://github.com/jouni-kantola/razor-partial-views-webpack-plugin/workflows/Node.js%20CI/badge.svg)
 
+## Versions and compatibility
+
+v4 for Rspack and webpack 5+
+v3 for webpack v2-5
+
 ## Usage
 
 `razor-partial-views-webpack-plugin` use rules for generating `cshtml`/`vbhtml` views wrapping assets built with webpack. With the plugin comes templates for scripts and styles, but any type of asset can be used as Razor view source.
